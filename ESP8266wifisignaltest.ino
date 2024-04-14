@@ -2,8 +2,8 @@
 #include <ESP8266WebServer.h>
 
 // Define your WiFi credentials
-const char* ssid = "Relax Residence_Plus";
-const char* password = "Relax2021@8751";
+const char* ssid = "YOUR_WIFI_SSID";
+const char* password = "YOUR_WIFI_PASS";
 
 // Initialize the web server on port 80
 ESP8266WebServer server(80);
@@ -22,7 +22,7 @@ void handleRoot() {
   html += "<script>setTimeout(function() { window.location.reload(true); }, 1000);</script>"; // Auto-refresh every 1 seconds
   html += "</head><body>";
   html += "<h1>ESP8266 Signal Strength</h1>";
-  html += "<h4>This webserver shows wifi strength its connected to Relax Residence_plus network for testing different spots of our WiFi.</h4>";
+  html += "<h4>This webserver shows wifi strength its connected to [YOUR WIFI NAME] network for testing different spots of our WiFi.</h4>";
   html += "<p>Signal Strength: " + String(strengthPercent) + "%</p>";
   html += "<div style='background-color: lightgray; width: 200px; height: 20px; border: 1px solid black;'>";
   html += "<div style='background-color: green; width: " + String(strengthPercent) + "%; height: 100%;'></div>";
